@@ -1,20 +1,30 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Sidebar from '../../components/sidebar/Sidebar';
+import PlayerBar from '../../components/playerbar/PlayerBar';
 
 const Main = () => {
-  useEffect(() => {
+  const navigate = useNavigate();
+
+  const setToken = () => {
     const queryParams = new URLSearchParams(window.location.hash.substring(1));
-    const token = queryParams.get('access_token') || '';
+    const token = queryParams.get('access_token');
+
     if (token != null) {
       sessionStorage.setItem('token', token);
-      console.log('1');
-    } else {
-      console.log('2');
+    } else if (token == null) {
+      navigate('/login');
     }
+  };
+  useEffect(() => {
+    setToken();
   }, []);
+
   return (
     <div>
-      <div className="justify-center flex">This is main spotify</div>
-      <div></div>
+      <Sidebar />
+      <div className="justify-center flex "></div>
+      <PlayerBar />
     </div>
   );
 };
