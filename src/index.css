@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'PromptRegular';
+  src:
+    local('PromptRegular'),
+    url('./assets/fonts/PromptRegular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PromptBold';
+  src:
+    local('PromptBold'),
+    url('./assets/fonts/PromptBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PromptLight';
+  src:
+    local('PromptLight'),
+    url('./assets/fonts/PromptLight.woff2') format('woff2');
+}
+
+body {
+  background: #181414;
+  color: white;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #57b660;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333333;
+  border-radius: 6px;
+}

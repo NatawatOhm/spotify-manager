@@ -1,0 +1,15 @@
+.topchar-container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 583px;
+  height: 40%;
+  padding: 16px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #1f1f1f;
+  overflow-y: auto;
+}
