@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = import.meta.env.VITE_APP_BASE_URL;
+const BASE_URL = 'https://api.spotify.com/';
 class BaseService {
   private url: string;
   private api: any;

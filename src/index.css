@@ -26,4 +26,18 @@
 body {
   background: #181414;
   color: white;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #57b660;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333333;
+  border-radius: 6px;
 }

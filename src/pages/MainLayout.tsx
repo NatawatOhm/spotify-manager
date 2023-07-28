@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
-import PlayerBar from '../components/playerbar/PlayerBar';
+import SpotifyEmbed from '../components/spotify-embed/SpotifyEmbed';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -9,9 +9,10 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <div>
-      <Sidebar />
-      <main>{children}</main>
-      <PlayerBar />
+      <div className="flex">
+        <Sidebar />
+        <main className="flex-1">{children}</main>
+      </div>
     </div>
   );
 };
